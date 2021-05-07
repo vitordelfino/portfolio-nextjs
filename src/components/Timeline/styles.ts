@@ -17,6 +17,12 @@ export const Timeline = styles.div`
     margin-left: -3px;
     z-index: -1
   }
+
+  @media(max-width: 800px) {
+    &:after {
+      left: 31px
+    }
+  }
 `;
 
 export const Container = styles.div<{ position: 'left' | 'right' }>`
@@ -25,12 +31,6 @@ export const Container = styles.div<{ position: 'left' | 'right' }>`
     position: relative;
     background-color: inherit;
     width: 50%;
-    transition: 'scale 0.2s';
-    cursor: pointer;
-
-  }
-  :hover {
-    transform: 'scale(1.1)';
   }
   &:after {
     content: '';
@@ -43,6 +43,12 @@ export const Container = styles.div<{ position: 'left' | 'right' }>`
     top: 15px;
     border-radius: 50%;
     z-index: 2;
+  }
+
+  @media(max-width: 800px) {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
   }
 
   ${(props) =>
@@ -63,6 +69,11 @@ export const Container = styles.div<{ position: 'left' | 'right' }>`
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent #edf2f7;
        }*/
+      @media (max-width: 800px) {
+        &:after {
+          left: 18px;
+        }
+      }
     `}
 
   ${(props) =>
@@ -86,6 +97,14 @@ export const Container = styles.div<{ position: 'left' | 'right' }>`
       &:after {
         left: -13px;
       }
+      @media (max-width: 800px) {
+        & {
+          left: 0%;
+        }
+        &:after {
+          left: 18px;
+        }
+      }
     `}
 `;
 
@@ -95,4 +114,9 @@ export const Content = styles.div`
   position: relative;
   border-radius: 6px;
   color: #171923;
+  cursor: pointer;
+  transition: transform 0.5s;
+  :hover {
+    transform: scale(1.05);
+  }
 `;

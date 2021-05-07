@@ -1,12 +1,13 @@
-import { Flex, Center } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 import HomePage from '../components/Home';
-import Header from '../components/Header';
 import InternetBankingFront from '../components/InternetBankingFront';
 import Timeline from '../components/Timeline';
+import Section from '../components/Section';
+import Header from '../components/Header';
 
 export default function Home(): JSX.Element {
   return (
-    <Flex justifyContent="center" flexDirection="column">
+    <>
       <Center
         position="fixed"
         style={{
@@ -20,9 +21,11 @@ export default function Home(): JSX.Element {
       >
         <Header />
       </Center>
-      <HomePage />
+      <Section>
+        <HomePage />
+      </Section>
       <InternetBankingFront />
       <Timeline />
-    </Flex>
+    </>
   );
 }
