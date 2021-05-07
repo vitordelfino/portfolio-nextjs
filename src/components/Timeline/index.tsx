@@ -29,10 +29,11 @@ const TimelineComponent = (): JSX.Element => {
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
+      margin="10rem auto"
     >
       <Center w="100%">
         <Text fontSize="xl" fontWeight="medium" marginBottom="10px">
-          My Expirence
+          My Experience
         </Text>
       </Center>
       <Timeline>

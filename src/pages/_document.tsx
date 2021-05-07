@@ -30,7 +30,7 @@ export default class Document extends NextDocument {
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body style={{ minWidth: '895px' }}>
           {/* Make Color mode to persists when you refresh the page. */}
           <ColorModeScript />
           <Main />

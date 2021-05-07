@@ -21,7 +21,6 @@ const InternetBankingFront = (): JSX.Element => {
     lg: ['row', '4xl'],
     xl: ['row', '4xl'],
   });
-  console.log('variant', variant);
   const [direction, size] = variant ?? ['row', '4xl'];
   const techs = [
     {
@@ -59,6 +58,7 @@ const InternetBankingFront = (): JSX.Element => {
       data-aos="fade"
       justifyContent="center"
       h="100vh"
+      margin="10rem auto"
     >
       <Center w={size}>
         <Img src="/whitelabel.png" data-aos="fade-right" />
