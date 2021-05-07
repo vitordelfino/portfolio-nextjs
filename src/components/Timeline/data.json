@@ -1,0 +1,118 @@
+[
+  {
+    "position": "left",
+    "effect": "right",
+    "period": "Jan 2020",
+    "function": "Senior Fullstack Developer",
+    "company": "Hubfintech",
+    "description": "Work on the development of an Internet Banking Whitelabel from scratch, contributing to Frontend and Backend",
+    "techs": {
+      "primary": ["Node.JS", "Typescript", "Jest"],
+      "secondary": [
+        "React",
+        "Redux",
+        "RabbitMQ",
+        "Socket.io",
+        "CI/CD",
+        "AWS S3",
+        "AWS Cloud Front"
+      ]
+    }
+  },
+  {
+    "position": "right",
+    "effect": "left",
+    "period": "Abr 2019 - Dez 2019",
+    "function": "Fullstack Developer",
+    "company": "Atlas Quantum",
+    "description": "I Built a dashboard and some robots plugged in Exchanges to manage crypto wallets",
+    "techs": {
+      "primary": ["Node.JS", "Typescript", "Jest"],
+      "secondary": ["Angular", "Ngrx", "Kafka", "Socket.io"]
+    }
+  },
+  {
+    "position": "left",
+    "effect": "right",
+    "period": "Ago 2018 - Abr 2019",
+    "function": "Backend Developer",
+    "company": "Go In",
+    "description": "I Worked on the development of a social event network (GoIn)",
+    "techs": {
+      "primary": ["Node.JS", "Typescript", "Serverless", "Graphql"],
+      "secondary": [
+        "AWS Lambda",
+        "AWS Cognito",
+        "DynamoDB",
+        "SQS",
+        "CloudSearch"
+      ]
+    }
+  },
+  {
+    "position": "right",
+    "effect": "left",
+    "period": "Mar 2018 - Ago 2018",
+    "function": "Developer",
+    "company": "Itaú Unibanco",
+    "description": "I Worked on the development of itaú bankline to non correntist",
+    "techs": {
+      "primary": ["Node.JS", "Typescript", "Serverless", "Graphql"],
+      "secondary": [
+        "AWS Lambda",
+        "AWS Cognito",
+        "DynamoDB",
+        "SQS",
+        "CloudSearch"
+      ]
+    }
+  },
+  {
+    "position": "left",
+    "effect": "right",
+    "period": "Dez 2017 - Mar 2018",
+    "function": "Systems Analyst",
+    "company": "B3",
+    "description": "I Worked on the development of a dashboard to manage activities allocated per employes",
+    "techs": {
+      "primary": ["Node.JS", "Typescript"],
+      "secondary": ["Angular", "MySql", "SQL Server"]
+    }
+  },
+  {
+    "position": "left",
+    "effect": "right",
+    "period": "Ago 2016 - Dez 2017",
+    "function": "Intern of Systems Development",
+    "company": "B3",
+    "description": "Briefing of new demands; development and support of Java Applications; development of the database routines",
+    "techs": {
+      "primary": ["Java"],
+      "secondary": ["SQL Server"]
+    }
+  },
+  {
+    "position": "right",
+    "effect": "left",
+    "period": "Fev 2015 - Jul 2016",
+    "function": "URA Developer",
+    "company": "todo!",
+    "description": "Development and support of URA applications on convergys platform",
+    "techs": {
+      "primary": ["Java", "Javascript"],
+      "secondary": ["SQL Server", "SOA"]
+    }
+  },
+  {
+    "position": "right",
+    "effect": "left",
+    "period": "Fev 2014 - Fev 2015",
+    "function": "Intern",
+    "company": "todo!",
+    "description": "Follow up of TI Alerts; Execution and Validation of URA tests",
+    "techs": {
+      "primary": ["Excel", "VBA"],
+      "secondary": []
+    }
+  }
+]
