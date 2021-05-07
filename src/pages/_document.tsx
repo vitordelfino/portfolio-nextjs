@@ -3,12 +3,12 @@ import { ColorModeScript } from '@chakra-ui/react';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class Document extends NextDocument {
-  static getInitialProps({ renderPage }) {
+  static getInitialProps({ renderPage }: any): any {
     // Step 1: Create an instance of ServerStyleSheet
     const sheet = new ServerStyleSheet();
 
     // Step 2: Retrieve styles from components in the page
-    const page = renderPage((App) => (props) =>
+    const page = renderPage((App: any) => (props: any) =>
       sheet.collectStyles(<App {...props} />)
     );
 

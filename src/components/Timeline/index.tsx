@@ -36,7 +36,7 @@ const TimelineComponent = (): JSX.Element => {
         </Text>
       </Center>
       <Timeline>
-        {data.map((d, i) => (
+        {data.map((d) => (
           <Container
             position={d.position as any}
             data-aos="fade"

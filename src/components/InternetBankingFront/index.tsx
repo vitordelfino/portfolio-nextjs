@@ -2,10 +2,8 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import {
   Center,
-  Box,
   Img,
   Text,
-  Spacer,
   Stack,
   VStack,
   useBreakpointValue,
