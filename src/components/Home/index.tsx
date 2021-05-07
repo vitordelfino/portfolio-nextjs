@@ -8,7 +8,7 @@ import {
 
 const Home = (): JSX.Element => {
   const variant = useBreakpointValue<[string, string, string, string, string]>({
-    base: ['8xl', '5xl', '100', '35rem', '36'],
+    base: ['2xl', 'xl', '36', '10rem', '16'],
     xs: ['2xl', 'lg', '36', 'none', '16'],
     sm: ['2xl', 'lg', '36', 'none', '16'],
     md: ['4xl', 'lg', '48', 'none', '16'],
@@ -23,7 +23,12 @@ const Home = (): JSX.Element => {
     '16',
   ];
   return (
-    <VStack spacing={spacing} data-aos="fade" margin={`${marginTop} auto`}>
+    <VStack
+      spacing={spacing}
+      data-aos="fade"
+      margin={`${marginTop} auto`}
+      textAlign="center"
+    >
       <VStack>
         <HStack>
           <Text fontSize={fontS} fontWeight="thin">

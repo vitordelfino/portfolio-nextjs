@@ -15,23 +15,22 @@ import { Timeline, Container, Content } from './styles';
 import data from './data.json';
 
 const TimelineComponent = (): JSX.Element => {
-  const variant = useBreakpointValue<[string, string, string, string, string]>({
-    base: ['5xl', '5xl', '6xl', '5xl', '3rem'],
-    sm: ['xl', 'sm', 'md', 'sm', 'sm'],
-    md: ['xl', 'sm', 'md', 'sm', 'sm'],
-    lg: ['xl', 'sm', 'md', 'sm', 'sm'],
-    xl: ['xl', 'sm', 'md', 'sm', 'sm'],
-  });
   const iconVariant = useBreakpointValue<[string, string]>({
-    base: ['4rem', '5'],
+    base: ['auto', '1.5'],
     sm: ['auto', '1.5'],
     md: ['auto', '1.5'],
     lg: ['auto', '1.5'],
     xl: ['auto', '1.5'],
   });
-
   const [iconSize, marginIcon] = iconVariant ?? ['auto', '1.5'];
 
+  const variant = useBreakpointValue<[string, string, string, string, string]>({
+    base: ['2xl', 'md', 'md', 'sm', 'sm'],
+    sm: ['xl', 'sm', 'md', 'sm', 'sm'],
+    md: ['xl', 'sm', 'md', 'sm', 'sm'],
+    lg: ['xl', 'sm', 'md', 'sm', 'sm'],
+    xl: ['xl', 'sm', 'md', 'sm', 'sm'],
+  });
   const [
     fontSizeExp,
     fontSizePeriod,
@@ -86,11 +85,7 @@ const TimelineComponent = (): JSX.Element => {
                 <Wrap>
                   {d.techs.primary.map((t) => (
                     <WrapItem key={t}>
-                      <Tag
-                        size={tagSize}
-                        colorScheme="facebook"
-                        style={{ fontSize: tagSize !== 'sm' ? tagSize : '' }}
-                      >
+                      <Tag size={tagSize} colorScheme="facebook">
                         <Text>{t}</Text>
                       </Tag>
                     </WrapItem>
@@ -99,11 +94,7 @@ const TimelineComponent = (): JSX.Element => {
                 <Wrap mt="0.5rem">
                   {d.techs.secondary.map((t) => (
                     <WrapItem key={t}>
-                      <Tag
-                        size={tagSize}
-                        colorScheme="messenger"
-                        style={{ fontSize: tagSize !== 'sm' ? tagSize : '' }}
-                      >
+                      <Tag size={tagSize} colorScheme="messenger">
                         <Text>{t}</Text>
                       </Tag>
                     </WrapItem>

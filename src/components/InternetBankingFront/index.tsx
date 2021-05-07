@@ -19,7 +19,7 @@ const InternetBankingFront = (): JSX.Element => {
   const variant = useBreakpointValue<
     [StackDirection, string, string, string, string, string, string, string]
   >({
-    base: ['column', 'auto', '8xl', '6xl', 'none', 'auto', '12rem', '5xl'],
+    base: ['column', 'auto', 'xl', 'lg', 'none', '16', '2rem', 'md'],
     lg: ['row', '4xl', '2xl', 'lg', '550px', '20', '12', 'md'],
     xl: ['row', '4xl', '2xl', 'lg', '550px', '20', '12', 'md'],
   });

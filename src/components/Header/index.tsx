@@ -33,7 +33,7 @@ const Header = (): JSX.Element => {
   ];
 
   const variant = useBreakpointValue({
-    base: '24',
+    base: '8',
     sm: '8',
     md: '8',
     lg: '8',
