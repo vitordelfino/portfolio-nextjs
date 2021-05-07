@@ -13,6 +13,8 @@ const Home = (): JSX.Element => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
+      disable: 'mobile',
+      startEvent: 'load',
     });
   }, []);
 
