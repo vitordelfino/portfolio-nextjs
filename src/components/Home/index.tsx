@@ -1,5 +1,4 @@
 import {
-  Center,
   VStack,
   HStack,
   Text,
