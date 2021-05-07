@@ -7,17 +7,23 @@ import {
 } from '@chakra-ui/react';
 
 const Home = (): JSX.Element => {
-  const variant = useBreakpointValue<[string, string, string]>({
-    base: ['6xl', '64', 'base'],
-    xs: ['2xl', '36', 'xs'],
-    sm: ['2xl', '36', 'sm'],
-    md: ['4xl', '48', 'md'],
-    lg: ['5xl', '52', 'lg'],
-    xl: ['6xl', '64', 'xl'],
+  const variant = useBreakpointValue<[string, string, string, string, string]>({
+    base: ['8xl', '5xl', '100', '35rem', '36'],
+    xs: ['2xl', 'lg', '36', 'none', '16'],
+    sm: ['2xl', 'lg', '36', 'none', '16'],
+    md: ['4xl', 'lg', '48', 'none', '16'],
+    lg: ['5xl', 'lg', '52', 'none', '16'],
+    xl: ['6xl', 'lg', '64', 'none', '16'],
   });
-  const [fontS, imgW] = variant ?? ['2xl', '36', 'undefined'];
+  const [fontS, secondFont, imgW, marginTop, spacing] = variant ?? [
+    '2xl',
+    '36',
+    'lg',
+    'none',
+    '16',
+  ];
   return (
-    <VStack spacing="16" data-aos="fade">
+    <VStack spacing={spacing} data-aos="fade" margin={`${marginTop} auto`}>
       <VStack>
         <HStack>
           <Text fontSize={fontS} fontWeight="thin">
@@ -27,7 +33,9 @@ const Home = (): JSX.Element => {
             Vitor Delfino
           </Text>
         </HStack>
-        <Text fontWeight="light">I develop some things for Job and Fun</Text>
+        <Text fontSize={secondFont} fontWeight="light">
+          I develop some things for Job and Fun
+        </Text>
       </VStack>
       <Img
         src="/profile.png"

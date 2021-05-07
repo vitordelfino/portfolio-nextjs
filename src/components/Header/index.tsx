@@ -1,4 +1,11 @@
-import * as chakra from '@chakra-ui/react';
+import {
+  Center,
+  HStack,
+  Tooltip,
+  Link,
+  Icon,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaDev, FaTwitter } from 'react-icons/fa';
 
 const Header = (): JSX.Element => {
@@ -24,24 +31,33 @@ const Header = (): JSX.Element => {
       name: 'Dev.to',
     },
   ];
+
+  const variant = useBreakpointValue({
+    base: '24',
+    sm: '8',
+    md: '8',
+    lg: '8',
+    xl: '8',
+  });
+  console.log('Header variant', variant);
   return (
-    <chakra.Center>
-      <chakra.HStack spacing={8}>
+    <Center>
+      <HStack spacing={8}>
         {socials.map((s) => (
-          <chakra.Tooltip label={s.name} key={s.link}>
-            <chakra.Link href={s.link} isExternal>
-              <chakra.Icon
+          <Tooltip label={s.name} key={s.link}>
+            <Link href={s.link} isExternal>
+              <Icon
                 as={s.icon}
-                w="8"
-                h="8"
+                w={variant || '8'}
+                h={variant || '8'}
                 _hover={{ transform: 'scale(1.1)' }}
                 transition="transform 0.2s"
               />
-            </chakra.Link>
-          </chakra.Tooltip>
+            </Link>
+          </Tooltip>
         ))}
-      </chakra.HStack>
-    </chakra.Center>
+      </HStack>
+    </Center>
   );
 };
 

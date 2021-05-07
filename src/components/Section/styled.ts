@@ -6,4 +6,8 @@ export const Section = styled.div`
   align-items: center;
   flex-direction: column;
   height: 100vh;
+
+  @media (max-width: 800px) {
+    height: auto;
+  }
 `;

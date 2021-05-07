@@ -16,12 +16,23 @@ const InternetBankingFront = (): JSX.Element => {
   useEffect(() => {
     Aos.init();
   }, []);
-  const variant = useBreakpointValue<[StackDirection, string]>({
-    base: ['column', '4xl'],
-    lg: ['row', '4xl'],
-    xl: ['row', '4xl'],
+  const variant = useBreakpointValue<
+    [StackDirection, string, string, string, string, string, string, string]
+  >({
+    base: ['column', 'auto', '8xl', '6xl', 'none', 'auto', '12rem', '5xl'],
+    lg: ['row', '4xl', '2xl', 'lg', '550px', '20', '12', 'md'],
+    xl: ['row', '4xl', '2xl', 'lg', '550px', '20', '12', 'md'],
   });
-  const [direction, size] = variant ?? ['row', '4xl'];
+  const [
+    direction,
+    size,
+    fontTitle,
+    fontDescription,
+    wrapWidth,
+    wrapItemWidth,
+    iconSize,
+    techTitleSize,
+  ] = variant ?? ['row', '4xl', '2xl', 'lg', '550px', '20', '12', 'md'];
   const techs = [
     {
       icon: '/icons/react.svg',
@@ -53,63 +64,62 @@ const InternetBankingFront = (): JSX.Element => {
     },
   ];
   return (
-    <Center>
-      <Stack
-        direction={direction}
-        data-aos="fade"
-        justifyContent="center"
-        minHeight="700px"
-      >
-        <Center w={size}>
-          <Img src="/whitelabel.png" data-aos="fade-right" />
-        </Center>
-        <Center w={size}>
-          <VStack spacing="5" data-aos="fade">
-            <VStack>
-              <Text fontSize="2xl" fontWeight="500">
-                Internet Banking Whitelabel
-              </Text>
-              <Text fontSize="medium">
-                An whitelabel internet bank, using React with Redux / Redux Saga
-              </Text>
-            </VStack>
-            <Wrap
-              spacing="10"
-              align="center"
-              maxW="550px"
-              marginTop="3"
-              justify="center"
-            >
-              {techs.map((t) => (
-                <WrapItem
-                  flexDirection="column"
-                  alignItems="center"
-                  justifyContent="space-between"
-                  w="20"
-                  textAlign="center"
-                  margin="1"
-                  key={t.name}
-                >
-                  <Img
-                    w="12"
-                    src={t.icon}
-                    filter="drop-shadow(rgb(153, 153, 153) 0px 0px 10px)"
-                    cursor="pointer"
-                    _hover={{
-                      transform: 'scale(1.1)',
-                    }}
-                    transition="scale 0.2s"
-                  />
-                  <Text marginTop="1.5" fontSize="md">
-                    {t.name}
-                  </Text>
-                </WrapItem>
-              ))}
-            </Wrap>
+    <Stack
+      direction={direction}
+      data-aos="fade"
+      justifyContent="center"
+      minHeight="700px"
+      marginBottom="10rem"
+    >
+      <Center w={size}>
+        <Img src="/whitelabel.png" data-aos="fade-right" />
+      </Center>
+      <Center w={size}>
+        <VStack spacing="5" data-aos="fade" w="100%">
+          <VStack textAlign="center">
+            <Text fontSize={fontTitle} fontWeight="500">
+              Internet Banking Whitelabel
+            </Text>
+            <Text fontSize={fontDescription}>
+              An whitelabel internet bank, using React with Redux / Redux Saga
+            </Text>
           </VStack>
-        </Center>
-      </Stack>
-    </Center>
+          <Wrap
+            spacing="10"
+            align="center"
+            maxW={wrapWidth}
+            marginTop="3"
+            justify="center"
+          >
+            {techs.map((t) => (
+              <WrapItem
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="space-between"
+                w={wrapItemWidth}
+                textAlign="center"
+                margin="1"
+                key={t.name}
+              >
+                <Img
+                  w={iconSize}
+                  src={t.icon}
+                  filter="drop-shadow(rgb(153, 153, 153) 0px 0px 10px)"
+                  cursor="pointer"
+                  _hover={{
+                    transform: 'scale(1.1)',
+                  }}
+                  transition="scale 0.2s"
+                />
+                <Text marginTop="1.5" fontSize={techTitleSize}>
+                  {t.name}
+                </Text>
+              </WrapItem>
+            ))}
+          </Wrap>
+        </VStack>
+      </Center>
+    </Stack>
   );
 };
 
