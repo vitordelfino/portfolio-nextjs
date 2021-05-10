@@ -1,5 +1,4 @@
 import {
-  VStack,
   Text,
   Center,
   Icon,

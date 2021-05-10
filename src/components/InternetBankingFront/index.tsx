@@ -25,7 +25,7 @@ const InternetBankingFront = (): JSX.Element => {
   });
   const [
     direction,
-    size,
+    _,
     fontTitle,
     fontDescription,
     wrapWidth,
@@ -86,11 +86,11 @@ const InternetBankingFront = (): JSX.Element => {
             justify="center"
           >
             {techs.map((t) => (
-              <WrapItem     
+              <WrapItem
                 flexDirection="column"
-                alignItems="center"  
+                alignItems="center"
                 justifyContent="center"
-                textAlign="center"         
+                textAlign="center"
                 key={t.name}
                 w={wrapItemWidth}
               >
