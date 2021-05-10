@@ -27,11 +27,11 @@ export default function Home(): JSX.Element {
       <Section>
         <InternetBankingFront />
       </Section>
-      {/* <Section>
+      <Section>
         <Timeline />
-      </Section> */}
+      </Section>
 
-      <Timeline />
+      {/* <Timeline /> */}
     </>
   );
 }
