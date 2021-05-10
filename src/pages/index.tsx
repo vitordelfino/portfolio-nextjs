@@ -24,7 +24,13 @@ export default function Home(): JSX.Element {
       <Section>
         <HomePage />
       </Section>
-      <InternetBankingFront />
+      <Section>
+        <InternetBankingFront />
+      </Section>
+      {/* <Section>
+        <Timeline />
+      </Section> */}
+
       <Timeline />
     </>
   );

@@ -19,7 +19,7 @@ const InternetBankingFront = (): JSX.Element => {
   const variant = useBreakpointValue<
     [StackDirection, string, string, string, string, string, string, string]
   >({
-    base: ['column', 'auto', 'xl', 'lg', 'none', '16', '2rem', 'md'],
+    base: ['column', 'auto', 'xl', 'lg', 'none', '16', '2rem', 'sm'],
     lg: ['row', '4xl', '2xl', 'lg', '550px', '20', '12', 'md'],
     xl: ['row', '4xl', '2xl', 'lg', '550px', '20', '12', 'md'],
   });
@@ -64,17 +64,11 @@ const InternetBankingFront = (): JSX.Element => {
     },
   ];
   return (
-    <Stack
-      direction={direction}
-      data-aos="fade"
-      justifyContent="center"
-      minHeight="700px"
-      marginBottom="10rem"
-    >
-      <Center w={size}>
+    <Stack direction={direction} data-aos="fade" justifyContent="center">
+      <Center>
         <Img src="/whitelabel.png" data-aos="fade-right" />
       </Center>
-      <Center w={size}>
+      <Center>
         <VStack spacing="5" data-aos="fade" w="100%">
           <VStack textAlign="center">
             <Text fontSize={fontTitle} fontWeight="500">
@@ -85,25 +79,24 @@ const InternetBankingFront = (): JSX.Element => {
             </Text>
           </VStack>
           <Wrap
-            spacing="10"
+            p="1.5"
+            spacing="4"
             align="center"
             maxW={wrapWidth}
-            marginTop="3"
             justify="center"
           >
             {techs.map((t) => (
-              <WrapItem
+              <WrapItem     
                 flexDirection="column"
-                alignItems="center"
-                justifyContent="space-between"
-                w={wrapItemWidth}
-                textAlign="center"
-                margin="1"
+                alignItems="center"  
+                justifyContent="center"
+                textAlign="center"         
                 key={t.name}
+                w={wrapItemWidth}
               >
                 <Img
-                  w={iconSize}
                   src={t.icon}
+                  w={iconSize}
                   filter="drop-shadow(rgb(153, 153, 153) 0px 0px 10px)"
                   cursor="pointer"
                   _hover={{

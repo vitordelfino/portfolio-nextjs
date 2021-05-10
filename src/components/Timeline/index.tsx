@@ -38,73 +38,75 @@ const TimelineComponent = (): JSX.Element => {
     fontSizeDescription,
     tagSize,
   ] = variant ?? ['xl', 'sm', 'md', 'sm', 'sm'];
-  return (
-    <Center w="100%">
-      <VStack w="100%">
-        <Text fontSize={fontSizeExp} fontWeight="medium" marginBottom="10px">
-          My Experience
-        </Text>
 
-        <Timeline>
-          {data.map((d) => (
-            <Container
-              position={d.position as any}
-              data-aos="fade"
-              key={d.description}
-            >
-              <Content data-aos={`fade-${d.effect}`}>
-                <Flex
-                  justifyContent="flex-start"
-                  alignItems="center"
-                  marginBottom="1.5"
-                >
-                  <Icon
-                    as={FiCalendar}
-                    marginRight={marginIcon}
-                    w={iconSize}
-                    h={iconSize}
-                  />
-                  <Text
-                    fontSize={fontSizePeriod}
-                    fontWeight="semibold"
-                    mt="3px"
-                  >
-                    {d.period}
-                  </Text>
-                </Flex>
-                <Flex direction="row">
-                  <Text>&bull;</Text>&nbsp;
-                  <Text fontSize={fontSizeFunction} fontWeight="medium">
-                    {d.function}&nbsp; at&nbsp;
-                    <strong>{d.company}</strong>
-                  </Text>
-                </Flex>
-                <Flex margin="0.5rem 0.1rem">
-                  <Text fontSize={fontSizeDescription}>{d.description}</Text>
-                </Flex>
-                <Wrap>
-                  {d.techs.primary.map((t) => (
-                    <WrapItem key={t}>
-                      <Tag size={tagSize} colorScheme="facebook">
-                        <Text>{t}</Text>
-                      </Tag>
-                    </WrapItem>
-                  ))}
-                </Wrap>
-                <Wrap mt="0.5rem">
-                  {d.techs.secondary.map((t) => (
-                    <WrapItem key={t}>
-                      <Tag size={tagSize} colorScheme="messenger">
-                        <Text>{t}</Text>
-                      </Tag>
-                    </WrapItem>
-                  ))}
-                </Wrap>
-              </Content>
-            </Container>
-          ))}
-        </Timeline>
-      </VStack>
+  /* <Center flexDirection="column">
+    <Text fontSize={fontSizeExp} fontWeight="medium" marginY="10px">
+      My Experience
+    </Text>
+  </Center> */
+
+  return (
+    <Center flexDirection="column">
+      <Text fontSize={fontSizeExp} fontWeight="medium" marginY="10px">
+        My Experience
+      </Text>
+
+      <Timeline>
+        {data.map((d) => (
+          <Container
+            position={d.position as any}
+            data-aos="fade"
+            key={d.description}
+          >
+            {/* data-aos={`fade-${d.effect}`} */}
+            <Content>
+              <Flex
+                justifyContent="flex-start"
+                alignItems="center"
+                marginBottom="1.5"
+              >
+                <Icon
+                  as={FiCalendar}
+                  marginRight={marginIcon}
+                  w={iconSize}
+                  h={iconSize}
+                />
+                <Text fontSize={fontSizePeriod} fontWeight="semibold" mt="3px">
+                  {d.period}
+                </Text>
+              </Flex>
+              <Flex direction="row">
+                <Text>&bull;</Text>&nbsp;
+                <Text fontSize={fontSizeFunction} fontWeight="medium">
+                  {d.function}&nbsp; at&nbsp;
+                  <strong>{d.company}</strong>
+                </Text>
+              </Flex>
+              <Flex margin="0.5rem 0.1rem">
+                <Text fontSize={fontSizeDescription}>{d.description}</Text>
+              </Flex>
+              <Wrap>
+                {d.techs.primary.map((t) => (
+                  <WrapItem key={t}>
+                    <Tag size={tagSize} colorScheme="facebook">
+                      <Text>{t}</Text>
+                    </Tag>
+                  </WrapItem>
+                ))}
+              </Wrap>
+              <Wrap mt="0.5rem">
+                {d.techs.secondary.map((t) => (
+                  <WrapItem key={t}>
+                    <Tag size={tagSize} colorScheme="messenger">
+                      <Text>{t}</Text>
+                    </Tag>
+                  </WrapItem>
+                ))}
+              </Wrap>
+            </Content>
+          </Container>
+        ))}
+      </Timeline>
     </Center>
   );
 };
