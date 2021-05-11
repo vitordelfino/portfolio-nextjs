@@ -8,4 +8,9 @@ export const StyledContainer = styled.main`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+
+  @media(max-width: 800px) {
+    overflow-y: inherit;
+  }
 `;
