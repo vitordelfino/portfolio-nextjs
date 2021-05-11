@@ -4,7 +4,7 @@ import Aos from 'aos';
 
 import { useEffect } from 'react';
 import theme from '../styles/theme';
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   // return <Component {...pageProps} />;
@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     Aos.init({
       duration: 1000,
       disable: 'mobile',
-      startEvent: 'load',
     });
+    window.addEventListener('load', Aos.refresh);
   }, []);
   return (
     <ChakraProvider resetCSS theme={theme}>

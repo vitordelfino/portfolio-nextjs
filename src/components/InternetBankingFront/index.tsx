@@ -79,12 +79,12 @@ const InternetBankingFront = (): JSX.Element => {
     },
   ];
   return (
-    <Stack direction={direction} justifyContent="center">
-      <Center w={size}>
+    <Stack direction={direction} justifyContent="center" data-aos="fade">
+      <Center w={size} data-aos="zoom-in">
         <Img src="/whitelabel.png" />
       </Center>
       <Center>
-        <VStack spacing="5" w="100%">
+        <VStack spacing="5" w="100%" data-aos="zoom-in">
           <VStack textAlign="center">
             <Text fontSize={fontTitle} fontWeight="500">
               Internet Banking Whitelabel

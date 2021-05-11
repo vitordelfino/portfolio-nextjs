@@ -54,13 +54,13 @@ const Pokedex = (): JSX.Element => {
     },
   ];
   return (
-    <Stack direction={direction} justifyContent="center">
-      <Center w={size}>
-        <video controls autoPlay loop muted width="80%">
+    <Stack direction={direction} justifyContent="center" data-aos="fade">
+      <Center w={size} data-aos="zoom-in">
+        <video autoPlay loop muted width="80%">
           <source src="/video/pokedex.mp4" type="video/mp4" />
         </video>
       </Center>
-      <Center>
+      <Center data-aos="zoom-in">
         <VStack spacing="5" w="100%">
           <VStack textAlign="center">
             <Text fontSize={fontTitle} fontWeight="500">

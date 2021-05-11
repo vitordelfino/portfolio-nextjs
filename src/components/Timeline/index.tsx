@@ -38,14 +38,8 @@ const TimelineComponent = (): JSX.Element => {
     tagSize,
   ] = variant ?? ['xl', 'sm', 'md', 'sm', 'sm'];
 
-  /* <Center flexDirection="column">
-    <Text fontSize={fontSizeExp} fontWeight="medium" marginY="10px">
-      My Experience
-    </Text>
-  </Center> */
-
   return (
-    <Center flexDirection="column">
+    <Center flexDirection="column" data-aos="fade">
       <Text fontSize={fontSizeExp} fontWeight="medium" marginY="10px">
         My Experience
       </Text>
@@ -54,11 +48,10 @@ const TimelineComponent = (): JSX.Element => {
         {data.map((d) => (
           <Container
             position={d.position as any}
-            // data-aos="fade"
+            data-aos="fade"
             key={d.description}
           >
-            {/* data-aos={`fade-${d.effect}`} */}
-            <Content>
+            <Content data-aos={`fade-${d.effect}`}>
               <Flex
                 justifyContent="flex-start"
                 alignItems="center"

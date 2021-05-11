@@ -16,7 +16,7 @@ export default function Home(): JSX.Element {
           backdropFilter: 'blur(8px)',
         }}
         top="0"
-        w="100%"
+        w="98%"
         zIndex="1"
         background="rgba(23, 25, 35, 0.9)"
         p={5}

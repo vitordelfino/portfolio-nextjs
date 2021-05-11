@@ -22,6 +22,7 @@ const Home = (): JSX.Element => {
     'none',
     '16',
   ];
+
   return (
     <VStack
       spacing={spacing}
