@@ -6,6 +6,7 @@ import Section from '../components/Section';
 import Header from '../components/Header';
 import Pokedex from '../components/Pokedex';
 import Container from '../components/Container';
+import ExpressHandlerErrors from '../components/ExpressHandlerErrors';
 
 export default function Home(): JSX.Element {
   return (
@@ -31,6 +32,9 @@ export default function Home(): JSX.Element {
       </Section>
       <Section>
         <Pokedex />
+      </Section>
+      <Section>
+        <ExpressHandlerErrors />
       </Section>
       <Timeline />
     </Container>
