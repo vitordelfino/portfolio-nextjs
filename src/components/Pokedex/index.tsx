@@ -10,9 +10,12 @@ import {
   StackDirection,
   Wrap,
   WrapItem,
+  Link,
 } from '@chakra-ui/react';
 
-const InternetBankingFront = (): JSX.Element => {
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+
+const Pokedex = (): JSX.Element => {
   const variant = useBreakpointValue<
     [StackDirection, string, string, string, string, string, string, string]
   >({
@@ -32,69 +35,45 @@ const InternetBankingFront = (): JSX.Element => {
   ] = variant ?? ['row', '4xl', '2xl', 'lg', '550px', '20', '12', 'md'];
   const techs = [
     {
+      icon: '/icons/nextjs-icon.svg',
+      name: 'Next',
+    },
+    {
       icon: '/icons/react.svg',
       name: 'React',
     },
     {
-      icon: '/icons/redux.svg',
-      name: 'Redux',
+      icon: '/icons/chakra-ui.png',
+      name: 'Chakra',
     },
     {
-      icon: '/icons/redux-saga.svg',
-      name: 'Redux Saga',
-    },
-    {
-      icon: '/icons/ant-design.svg',
-      name: 'Ant.Design',
-    },
-    {
-      icon: '/icons/reactotron.svg',
-      name: 'Reactotron',
-    },
-    {
-      icon: '/icons/socket-io.svg',
-      name: 'Socket.io',
+      icon: '/icons/react-query.svg',
+      name: 'React Query',
     },
     {
       icon: '/icons/typescript.svg',
       name: 'Typescript',
     },
-    {
-      icon: '/icons/nodejs.svg',
-      name: 'Node.JS',
-    },
-    {
-      icon: '/icons/typeorm.png',
-      name: 'Typeorm',
-    },
-    {
-      icon: '/icons/rabbitmq.svg',
-      name: 'RabbitMQ',
-    },
-    {
-      icon: '/icons/jest.svg',
-      name: 'Jest',
-    },
-    {
-      icon: '/icons/docker.png',
-      name: 'Docker',
-    },
   ];
   return (
     <Stack direction={direction} justifyContent="center">
       <Center w={size}>
-        <Img src="/whitelabel.png" />
+        <video controls autoPlay loop muted width="80%">
+          <source src="/video/pokedex.mp4" type="video/mp4" />
+        </video>
       </Center>
       <Center>
         <VStack spacing="5" w="100%">
           <VStack textAlign="center">
             <Text fontSize={fontTitle} fontWeight="500">
-              Internet Banking Whitelabel
+              pokedex.dev &nbsp;
+              <Link href="https://pokedex.dev" isExternal>
+                <ExternalLinkIcon h="4" w="4" mb="1" />
+              </Link>
             </Text>
+
             <Text fontSize={fontDescription}>
-              An whitelabel internet bank, using React with Redux / Redux Saga.
-              <br />
-              The backend is develop with Node.JS + Typescript + Typeorm.
+              Developed to study new techs like Nextjs + Chakra UI + React Query
             </Text>
           </VStack>
           <Wrap
@@ -135,4 +114,4 @@ const InternetBankingFront = (): JSX.Element => {
   );
 };
 
-export default InternetBankingFront;
+export default Pokedex;

@@ -4,8 +4,11 @@ export const Timeline = styles.div`
   & {
     position: relative;
     max-width: 1200px;
-    // width: 100%;
+    overflow: hidden;
     margin: 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
+
   }
   &:after {
     content: '';

@@ -4,10 +4,12 @@ import InternetBankingFront from '../components/InternetBankingFront';
 import Timeline from '../components/Timeline';
 import Section from '../components/Section';
 import Header from '../components/Header';
+import Pokedex from '../components/Pokedex';
+import Container from '../components/Container';
 
 export default function Home(): JSX.Element {
   return (
-    <>
+    <Container>
       <Center
         position="fixed"
         style={{
@@ -28,10 +30,9 @@ export default function Home(): JSX.Element {
         <InternetBankingFront />
       </Section>
       <Section>
-        <Timeline />
+        <Pokedex />
       </Section>
-
-      {/* <Timeline /> */}
-    </>
+      <Timeline />
+    </Container>
   );
 }

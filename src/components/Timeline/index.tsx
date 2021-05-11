@@ -54,7 +54,7 @@ const TimelineComponent = (): JSX.Element => {
         {data.map((d) => (
           <Container
             position={d.position as any}
-            data-aos="fade"
+            // data-aos="fade"
             key={d.description}
           >
             {/* data-aos={`fade-${d.effect}`} */}

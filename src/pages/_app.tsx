@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     Aos.init({
       duration: 1000,
       disable: 'mobile',
-      // startEvent: 'load',
+      startEvent: 'load',
     });
   }, []);
   return (

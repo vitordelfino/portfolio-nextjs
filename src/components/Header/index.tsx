@@ -39,7 +39,6 @@ const Header = (): JSX.Element => {
     lg: '8',
     xl: '8',
   });
-  console.log('Header variant', variant);
   return (
     <Center>
       <HStack spacing={8}>
