@@ -41,10 +41,6 @@ const ExpressHandlerErrors = (): JSX.Element => {
       name: 'Typescript',
     },
     {
-      icon: '/icons/typeorm.png',
-      name: 'Typeorm',
-    },
-    {
       icon: '/icons/jest.svg',
       name: 'Jest',
     },
