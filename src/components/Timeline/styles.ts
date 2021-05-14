@@ -46,7 +46,7 @@ export const Container = styles.div<{ position: 'left' | 'right' }>`
     border: 4px solid #2C5282;
     top: 15px;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 1;
   }
 
   @media(max-width: 800px) {

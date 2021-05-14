@@ -23,7 +23,8 @@ export default class Document extends NextDocument {
     return (
       <Html>
         <Head>
-          {/* <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> */}
+          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Noto+Sans+JP:wght@100;300;400;500&display=swap"
