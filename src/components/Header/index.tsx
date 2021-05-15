@@ -12,7 +12,7 @@ const Header = (): JSX.Element => {
   const socials = [
     {
       icon: FaTwitter,
-      link: 'https://twitter.com/vitordelfino',
+      link: 'https://twitter.com/vitordelfino95',
       name: 'Twitter',
     },
     {
