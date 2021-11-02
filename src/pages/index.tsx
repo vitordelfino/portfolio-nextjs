@@ -9,6 +9,7 @@ import Pokedex from '../components/Pokedex';
 import Container from '../components/Container';
 import ExpressHandlerErrors from '../components/ExpressHandlerErrors';
 import Articles from '../components/Articles';
+import WatchVideosInGroup from '../components/WatchVideoInGroup';
 
 export default function Home(): JSX.Element {
   return (
@@ -65,6 +66,9 @@ export default function Home(): JSX.Element {
       </Section>
       <Section>
         <Pokedex />
+      </Section>
+      <Section>
+        <WatchVideosInGroup />
       </Section>
       <Section>
         <ExpressHandlerErrors />

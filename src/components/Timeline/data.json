@@ -1,8 +1,20 @@
 [
   {
+    "position": "right",
+    "effect": "left",
+    "period": "Out 2021",
+    "function": "Software Engineer",
+    "company": "Loft",
+    "description": "In progress ....",
+    "techs": {
+      "primary": ["Node.JS", "Typescript", "Jest"],
+      "secondary": ["React", "Redux", "Next", "NestJS"]
+    }
+  },
+  {
     "position": "left",
     "effect": "right",
-    "period": "Jan 2020",
+    "period": "Jan 2020 - Out 2021",
     "function": "Senior Fullstack Developer",
     "company": "Hubfintech",
     "description": "Work on the development of an Internet Banking Whitelabel from scratch, contributing to Frontend and Backend",
