@@ -1,14 +1,26 @@
 [
   {
-    "position": "right",
-    "effect": "left",
-    "period": "Out 2021",
+    "position": "left",
+    "effect": "right",
+    "period": "Fev 2023",
     "function": "Software Engineer",
-    "company": "Loft",
+    "company": "Nubank",
     "description": "In progress ....",
     "techs": {
+      "primary": ["Clojure", "Datomic", "Kafka"],
+      "secondary": []
+    }
+  },
+  {
+    "position": "right",
+    "effect": "left",
+    "period": "Out 2021 - Jan 2023",
+    "function": "Software Engineer",
+    "company": "Loft",
+    "description": "....",
+    "techs": {
       "primary": ["Node.JS", "Typescript", "Jest"],
-      "secondary": ["React", "Redux", "Next", "NestJS"]
+      "secondary": ["Golang", "React", "Redux", "Next", "NestJS"]
     }
   },
   {
